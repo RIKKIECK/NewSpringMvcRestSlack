@@ -24,7 +24,7 @@ pipeline {
     always {
       script {
         def slackChannel = '#jenkinsdevops'
-        def slackMessage = 'Build finished successfully!'
+        def slackMessage = 'Construcción finalizada con éxito Ricardo es la esperanza del planeta!'
         slackSend (channel: slackChannel, message: slackMessage)
       }
     }
