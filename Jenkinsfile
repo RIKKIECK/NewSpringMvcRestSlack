@@ -19,7 +19,17 @@ pipeline {
             
             }
         } 
-
-
      }
+     post {
+    always {
+      script {
+        def slackChannel = '#jenkinsdevops'
+        def slackMessage = 'Build finished successfully!'
+        slackSend (channel: slackChannel, message: slackMessage)
+      }
+    }
+  }
+    
+    
+    
 }
